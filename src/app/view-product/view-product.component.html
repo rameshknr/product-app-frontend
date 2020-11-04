@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="text-center">
+        <h3>Product Application</h3>
+    </div>
+    <hr/>
+    <div class="float-right">
+        <button type="button  " class="btn btn-success" (click)="addButton()">Add Product</button>
+    </div>
+    <hr/>
+    <div>
+        <div class="table-responsive-md">
+            <table class="table">
+                <caption>Product Details</caption>
+            
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Expiry Date</th>
+                    <th scope="col">Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr  class="table-info " *ngFor="let product of productService.product; index as i;">
+                    <th scope="row">{{i+1}}</th>
+                    <td><a (click)="setProductId(product.id)" [routerLink]="['/edit',product.productName]"  >{{product.productName}}</a></td>
+                    <td>{{product.productType}}</td>
+                    <td>{{product.expiryDate}}</td>
+                    <td>{{product.price}}</td>
+                    <td class="float-right text-danger" (click)="deleteProduct(product.id)"><i class="fas fa-minus-square"></i> </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>             
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="text-center">
+      <h3>Product Application</h3>
+    </div>
+      <div>
+          <div>
+            <h4 class="text-danger">Add Product</h4>
+            <button type="button" class="btn btn-info float-right" (click)="returnHome()">Go Back</button>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Product Name</span>
+              </div>
+              <input type="text"  #productName  class="form-control" placeholder="Enter a product Name" aria-label="productName" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Product Type</span>
+              </div>
+              <input type="text"  #productType  class="form-control" placeholder="Enter a Product Type" aria-label="productType" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Expiry Date</span>
+              </div>
+              <input type="text"  #expiryDate  class="form-control" placeholder="Enter a Expiry Date (YYYY-MM-DD)" aria-label="expiryDate" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Price</span>
+              </div>
+              <input type="text"  #price  class="form-control" placeholder="Enter a Price" aria-label="price" aria-describedby="basic-addon1">
+          </div>
+          
+          <div class=" float-right">
+              <button type="button float-right" class="btn btn-success" (click)="addProduct(productName.value,productType.value,expiryDate.value,price.value)">Add Product</button>
+          </div>
+      </div>
+  
+  </div>
+  

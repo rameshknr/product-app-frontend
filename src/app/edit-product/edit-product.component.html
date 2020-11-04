@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="text-center">
+      <h3>Product Application</h3>
+    </div>
+      <div>
+          <div>
+            <h4 class="text-danger">Update Product</h4>
+            <button type="button" class="btn btn-info float-right" (click)="returnHome()">Go Back</button>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Product Name</span>
+              </div>
+              <input type="text"  #productName  class="form-control" value="{{product.productName}}" aria-label="productName" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Product Type</span>
+              </div>
+              <input type="text"  #productType  class="form-control" value="{{product.productType}}" aria-label="productType" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Expiry Date</span>
+              </div>
+              <input type="text"  #expiryDate  class="form-control" value="{{product.expiryDate}}" aria-label="expiryDate" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Price</span>
+              </div>
+              <input type="text"  #price  class="form-control" value="{{product.price}}" aria-label="price" aria-describedby="basic-addon1">
+          </div>
+          
+          <div class=" float-right">
+              <button type="button float-right" class="btn btn-success" 
+              (click)="editProduct(productName.value,productType.value,expiryDate.value,price.value)">Update Product</button>
+          </div>
+      </div>
+  
+  </div>
+  
